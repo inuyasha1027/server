@@ -1,0 +1,41 @@
+SET @start_global_value = @@global.innodb_encryption;
+select @@global.innodb_encryption;
+@@global.innodb_encryption
+0
+select @@session.innodb_encryption;
+ERROR HY000: Variable 'innodb_encryption' is a GLOBAL variable
+show global variables like 'innodb_encryption';
+Variable_name	Value
+innodb_encryption	OFF
+show session variables like 'innodb_encryption';
+Variable_name	Value
+innodb_encryption	OFF
+select * from information_schema.global_variables
+where variable_name='innodb_encryption';
+VARIABLE_NAME	VARIABLE_VALUE
+INNODB_ENCRYPTION	OFF
+select * from information_schema.session_variables
+where variable_name='innodb_encryption';
+VARIABLE_NAME	VARIABLE_VALUE
+INNODB_ENCRYPTION	OFF
+set global innodb_encryption=ON;
+select @@global.innodb_encryption;
+@@global.innodb_encryption
+1
+set global innodb_encryption=OFF;
+select @@global.innodb_encryption;
+@@global.innodb_encryption
+0
+set global innodb_encryption=1;
+select @@global.innodb_encryption;
+@@global.innodb_encryption
+1
+set session innodb_encryption=1;
+ERROR HY000: Variable 'innodb_encryption' is a GLOBAL variable and should be set with SET GLOBAL
+set global innodb_encryption=1.1;
+ERROR 42000: Incorrect argument type to variable 'innodb_encryption'
+set global innodb_encryption=1e1;
+ERROR 42000: Incorrect argument type to variable 'innodb_encryption'
+set global innodb_encryption="foo";
+ERROR 42000: Variable 'innodb_encryption' can't be set to the value of 'foo'
+SET @@global.innodb_encryption = @start_global_value;

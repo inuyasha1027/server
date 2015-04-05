@@ -1,6 +1,6 @@
 --innodb-file-per-table=1
 --innodb-file-format=Barracuda
---innodb-encrypt-tables=off
+--innodb-encryption=off
 --innodb-immediate-scrub-data-uncompressed=ON
 --innodb-background-scrub-data-uncompressed=ON
 --innodb-background-scrub-data-compressed=ON
@@ -10,6 +10,6 @@
 --aria-encrypt-tables=ON
 --innodb-encryption-threads=4
 --innodb-encryption-rotate-key-age=15
---innodb-encrypt-tables=ON
+--innodb-encryption=ON
 --innodb-tablespaces-scrubbing
 

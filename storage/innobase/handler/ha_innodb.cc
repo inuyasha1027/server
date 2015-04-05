@@ -19124,7 +19124,7 @@ static MYSQL_SYSVAR_ULONG(fatal_semaphore_wait_threshold, srv_fatal_semaphore_wa
   UINT_MAX32, /* Maximum setting */
   0);
 
-static MYSQL_SYSVAR_BOOL(encrypt_tables, srv_encrypt_tables, 0,
+static MYSQL_SYSVAR_BOOL(encryption, srv_encrypt_tables, 0,
 			 "Enable InnoDB on-disk data encryption",
 			 0, 0, 0);
 
@@ -19412,7 +19412,7 @@ static struct st_mysql_sys_var* innobase_system_variables[]= {
   MYSQL_SYSVAR(mtflush_threads),
   MYSQL_SYSVAR(use_mtflush),
   /* Encryption feature */
-  MYSQL_SYSVAR(encrypt_tables),
+  MYSQL_SYSVAR(encryption),
   MYSQL_SYSVAR(encryption_threads),
   MYSQL_SYSVAR(encryption_rotate_key_age),
   MYSQL_SYSVAR(encryption_rotation_iops),

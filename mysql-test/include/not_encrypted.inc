@@ -1,4 +1,4 @@
-if (`select @@innodb_encrypt_tables = 1`)
+if (`select @@innodb_encryption = 1`)
 {
   skip only without encryption;
 }
