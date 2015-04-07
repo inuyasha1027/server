@@ -104,7 +104,7 @@ table_setup_consumers::m_share=
   COUNT_SETUP_CONSUMERS, /* records */
   sizeof(PFS_simple_index), /* ref length */
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE setup_consumers("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.setup_consumers("
                       "NAME VARCHAR(64) not null,"
                       "ENABLED ENUM ('YES', 'NO') not null)") }
 };

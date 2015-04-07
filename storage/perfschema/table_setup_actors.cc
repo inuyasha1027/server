@@ -41,7 +41,7 @@ table_setup_actors::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE setup_actors("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.setup_actors("
                       "HOST CHAR(60) collate utf8_bin default '%' not null,"
                       "USER CHAR(16) collate utf8_bin default '%' not null,"
                       "ROLE CHAR(16) collate utf8_bin default '%' not null)") }

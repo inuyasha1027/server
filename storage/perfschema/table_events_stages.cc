@@ -40,7 +40,7 @@ table_events_stages_current::m_share=
   1000, /* records */
   sizeof(PFS_simple_index), /* ref length */
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE events_stages_current("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.events_stages_current("
                       "THREAD_ID BIGINT unsigned not null,"
                       "EVENT_ID BIGINT unsigned not null,"
                       "END_EVENT_ID BIGINT unsigned,"
@@ -67,7 +67,7 @@ table_events_stages_history::m_share=
   1000, /* records */
   sizeof(pos_events_stages_history), /* ref length */
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE events_stages_history("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.events_stages_history("
                       "THREAD_ID BIGINT unsigned not null,"
                       "EVENT_ID BIGINT unsigned not null,"
                       "END_EVENT_ID BIGINT unsigned,"
@@ -94,7 +94,8 @@ table_events_stages_history_long::m_share=
   10000, /* records */
   sizeof(PFS_simple_index), /* ref length */
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE events_stages_history_long("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "events_stages_history_long("
                       "THREAD_ID BIGINT unsigned not null,"
                       "EVENT_ID BIGINT unsigned not null,"
                       "END_EVENT_ID BIGINT unsigned,"

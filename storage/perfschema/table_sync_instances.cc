@@ -41,7 +41,7 @@ table_mutex_instances::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE mutex_instances("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.mutex_instances("
                       "NAME VARCHAR(128) not null,"
                       "OBJECT_INSTANCE_BEGIN BIGINT unsigned not null,"
                       "LOCKED_BY_THREAD_ID BIGINT unsigned)") }
@@ -184,7 +184,7 @@ table_rwlock_instances::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE rwlock_instances("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.rwlock_instances("
                       "NAME VARCHAR(128) not null,"
                       "OBJECT_INSTANCE_BEGIN BIGINT unsigned not null,"
                       "WRITE_LOCKED_BY_THREAD_ID BIGINT unsigned,"
@@ -335,7 +335,7 @@ table_cond_instances::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE cond_instances("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.cond_instances("
                       "NAME VARCHAR(128) not null,"
                       "OBJECT_INSTANCE_BEGIN BIGINT unsigned not null)") }
 };

@@ -40,7 +40,8 @@ table_socket_summary_by_instance::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE socket_summary_by_instance("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "socket_summary_by_instance("
                       "EVENT_NAME VARCHAR(128) not null,"
                       "OBJECT_INSTANCE_BEGIN BIGINT unsigned not null,"
                       "COUNT_STAR BIGINT unsigned not null,"

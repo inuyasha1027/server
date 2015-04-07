@@ -41,7 +41,8 @@ table_esms_by_thread_by_event_name::m_share=
   1000, /* records */
   sizeof(pos_esms_by_thread_by_event_name),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE events_statements_summary_by_thread_by_event_name("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "events_statements_summary_by_thread_by_event_name("
                       "THREAD_ID BIGINT unsigned not null,"
                       "EVENT_NAME VARCHAR(128) not null,"
                       "COUNT_STAR BIGINT unsigned not null,"

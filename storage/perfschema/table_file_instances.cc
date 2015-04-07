@@ -40,7 +40,7 @@ table_file_instances::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE file_instances("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.file_instances("
                       "FILE_NAME VARCHAR(512) not null,"
                       "EVENT_NAME VARCHAR(128) not null,"
                       "OPEN_COUNT INTEGER unsigned not null)") }

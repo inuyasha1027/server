@@ -41,7 +41,8 @@ table_file_summary_by_event_name::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE file_summary_by_event_name("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "file_summary_by_event_name("
                       "EVENT_NAME VARCHAR(128) not null,"
                       "COUNT_STAR BIGINT unsigned not null,"
                       "SUM_TIMER_WAIT BIGINT unsigned not null,"

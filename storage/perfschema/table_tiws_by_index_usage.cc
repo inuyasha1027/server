@@ -41,7 +41,8 @@ table_tiws_by_index_usage::m_share=
   1000, /* records */
   sizeof(pos_tiws_by_index_usage),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE table_io_waits_summary_by_index_usage("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "table_io_waits_summary_by_index_usage("
                       "OBJECT_TYPE VARCHAR(64),"
                       "OBJECT_SCHEMA VARCHAR(64),"
                       "OBJECT_NAME VARCHAR(64),"

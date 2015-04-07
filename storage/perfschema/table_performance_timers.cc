@@ -38,7 +38,7 @@ table_performance_timers::m_share=
   COUNT_TIMER_NAME, /* records */
   sizeof(PFS_simple_index), /* ref length */
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE performance_timers("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.performance_timers("
                       "TIMER_NAME ENUM ('CYCLE', 'NANOSECOND', 'MICROSECOND', 'MILLISECOND', 'TICK') not null,"
                       "TIMER_FREQUENCY BIGINT,"
                       "TIMER_RESOLUTION BIGINT,"

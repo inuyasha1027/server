@@ -40,7 +40,8 @@ table_os_global_by_type::m_share=
   1000, /* records */
   sizeof(pos_os_global_by_type),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE objects_summary_global_by_type("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "objects_summary_global_by_type("
                       "OBJECT_TYPE VARCHAR(64),"
                       "OBJECT_SCHEMA VARCHAR(64),"
                       "OBJECT_NAME VARCHAR(64),"

@@ -34,7 +34,7 @@ table_threads::m_share=
   1000, /* records */
   sizeof(PFS_simple_index), /* ref length */
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE threads("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.threads("
                       "THREAD_ID BIGINT unsigned not null,"
                       "NAME VARCHAR(128) not null,"
                       "TYPE VARCHAR(10) not null,"

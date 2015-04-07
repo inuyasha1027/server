@@ -42,7 +42,7 @@ table_setup_instruments::m_share=
   1000, /* records */
   sizeof(pos_setup_instruments),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE setup_instruments("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.setup_instruments("
                       "NAME VARCHAR(128) not null,"
                       "ENABLED ENUM ('YES', 'NO') not null,"
                       "TIMED ENUM ('YES', 'NO') not null)") }

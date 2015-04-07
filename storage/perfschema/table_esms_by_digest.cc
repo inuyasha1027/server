@@ -45,7 +45,8 @@ table_esms_by_digest::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE events_statements_summary_by_digest("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "events_statements_summary_by_digest("
                       "SCHEMA_NAME VARCHAR(64),"
                       "DIGEST VARCHAR(32),"
                       "DIGEST_TEXT LONGTEXT,"

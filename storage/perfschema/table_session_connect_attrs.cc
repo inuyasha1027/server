@@ -29,7 +29,7 @@ table_session_connect_attrs::m_share=
   1000, /* records */
   sizeof(pos_connect_attr_by_thread_by_attr), /* ref length */
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE session_connect_attrs("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.session_connect_attrs("
                       "PROCESSLIST_ID INT NOT NULL,"
                       "ATTR_NAME VARCHAR(32) NOT NULL,"
                       "ATTR_VALUE VARCHAR(1024),"

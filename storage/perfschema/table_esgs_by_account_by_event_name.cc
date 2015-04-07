@@ -41,7 +41,8 @@ table_esgs_by_account_by_event_name::m_share=
   1000, /* records */
   sizeof(pos_esgs_by_account_by_event_name),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE events_stages_summary_by_account_by_event_name("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "events_stages_summary_by_account_by_event_name("
                       "USER CHAR(16) collate utf8_bin default null,"
                       "HOST CHAR(60) collate utf8_bin default null,"
                       "EVENT_NAME VARCHAR(128) not null,"

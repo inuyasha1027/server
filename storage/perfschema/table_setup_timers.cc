@@ -60,7 +60,7 @@ table_setup_timers::m_share=
   COUNT_SETUP_TIMERS,
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE setup_timers("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.setup_timers("
                       "NAME VARCHAR(64) not null,"
                       "TIMER_NAME ENUM ('CYCLE', 'NANOSECOND', 'MICROSECOND', 'MILLISECOND', 'TICK') not null)") }
 };

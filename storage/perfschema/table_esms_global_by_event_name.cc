@@ -43,7 +43,8 @@ table_esms_global_by_event_name::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE events_statements_summary_global_by_event_name("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "events_statements_summary_global_by_event_name("
                       "EVENT_NAME VARCHAR(128) not null,"
                       "COUNT_STAR BIGINT unsigned not null,"
                       "SUM_TIMER_WAIT BIGINT unsigned not null,"

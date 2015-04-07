@@ -42,7 +42,7 @@ table_setup_objects::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE setup_objects("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.setup_objects("
                       "OBJECT_TYPE ENUM ('TABLE') not null default 'TABLE',"
                       "OBJECT_SCHEMA VARCHAR(64) default '%',"
                       "OBJECT_NAME VARCHAR(64) not null default '%',"

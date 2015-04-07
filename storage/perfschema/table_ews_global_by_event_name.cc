@@ -43,7 +43,8 @@ table_ews_global_by_event_name::m_share=
   1000, /* records */
   sizeof(pos_ews_global_by_event_name),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE events_waits_summary_global_by_event_name("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "events_waits_summary_global_by_event_name("
                       "EVENT_NAME VARCHAR(128) not null,"
                       "COUNT_STAR BIGINT unsigned not null,"
                       "SUM_TIMER_WAIT BIGINT unsigned not null,"

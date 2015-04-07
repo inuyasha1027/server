@@ -36,7 +36,7 @@ table_hosts::m_share=
   1000, /* records */
   sizeof(PFS_simple_index), /* ref length */
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE hosts("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.hosts("
                       "HOST CHAR(60) collate utf8_bin default null,"
                       "CURRENT_CONNECTIONS bigint not null,"
                       "TOTAL_CONNECTIONS bigint not null)") }

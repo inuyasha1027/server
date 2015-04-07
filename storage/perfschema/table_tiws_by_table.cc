@@ -41,7 +41,8 @@ table_tiws_by_table::m_share=
   1000, /* records */
   sizeof(PFS_simple_index),
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE table_io_waits_summary_by_table("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema."
+                      "table_io_waits_summary_by_table("
                       "OBJECT_TYPE VARCHAR(64),"
                       "OBJECT_SCHEMA VARCHAR(64),"
                       "OBJECT_NAME VARCHAR(64),"

@@ -37,7 +37,7 @@ table_host_cache::m_share=
   1000, /* records */
   sizeof(PFS_simple_index), /* ref length */
   &m_table_lock,
-  { C_STRING_WITH_LEN("CREATE TABLE host_cache("
+  { C_STRING_WITH_LEN("CREATE TABLE performance_schema.host_cache("
                       "IP VARCHAR(64) not null,"
                       "HOST VARCHAR(255) collate utf8_bin,"
                       "HOST_VALIDATED ENUM ('YES', 'NO') not null,"
